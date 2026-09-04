@@ -20,7 +20,7 @@ document.querySelectorAll('.nav__list a').forEach(function (link) {
 
 /* =======================================================
    PARTE 2 — Serviços / Contato / Footer
-   Responsável: colega (Desenvolvedor)
+   Responsável: Murilo (Desenvolvedor)
    Branch: feature/servicos-contato
    ======================================================= */
 

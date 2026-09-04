@@ -1,0 +1,285 @@
+/* =======================================================
+   BASE / RESET
+   Criado no commit inicial (main), antes das branches.
+   ======================================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --cor-primaria: #2563eb;
+  --cor-primaria-escura: #1d4ed8;
+  --cor-texto: #1f2937;
+  --cor-texto-claro: #6b7280;
+  --cor-fundo-claro: #f8fafc;
+  --cor-borda: #e5e7eb;
+  --fonte: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  font-family: var(--fonte);
+  color: var(--cor-texto);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  font-size: 1rem;
+}
+
+.btn--primary {
+  background-color: var(--cor-primaria);
+  color: #fff;
+  transition: background-color 0.2s ease;
+}
+
+.btn--primary:hover {
+  background-color: var(--cor-primaria-escura);
+}
+
+h1, h2, h3 {
+  line-height: 1.25;
+}
+
+
+/* =======================================================
+   PARTE 1 — Header / Menu / Hero / Sobre
+   Responsável: Lucas (Gerente do Projeto)
+   Branch: feature/header-hero-sobre
+   ======================================================= */
+
+.header {
+  background-color: #fff;
+  border-bottom: 1px solid var(--cor-borda);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--cor-texto);
+  text-decoration: none;
+}
+
+.logo span {
+  color: var(--cor-primaria);
+}
+
+.nav__list {
+  list-style: none;
+  display: flex;
+  gap: 28px;
+}
+
+.nav__list a {
+  color: var(--cor-texto);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav__list a:hover {
+  color: var(--cor-primaria);
+}
+
+.nav__toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+.hero {
+  background-color: var(--cor-fundo-claro);
+  padding: 80px 0;
+  text-align: center;
+}
+
+.hero__content h1 {
+  font-size: 2.4rem;
+  margin-bottom: 16px;
+  color: var(--cor-texto);
+}
+
+.hero__content p {
+  font-size: 1.1rem;
+  color: var(--cor-texto-claro);
+  max-width: 600px;
+  margin: 0 auto 28px;
+}
+
+.sobre {
+  padding: 72px 0;
+}
+
+.sobre h2 {
+  font-size: 1.9rem;
+  margin-bottom: 20px;
+}
+
+.sobre p {
+  color: var(--cor-texto-claro);
+  max-width: 700px;
+  margin-bottom: 32px;
+}
+
+.sobre__stats {
+  display: flex;
+  gap: 48px;
+  flex-wrap: wrap;
+}
+
+.sobre__stats strong {
+  display: block;
+  font-size: 1.8rem;
+  color: var(--cor-primaria);
+}
+
+.sobre__stats span {
+  color: var(--cor-texto-claro);
+  font-size: 0.95rem;
+}
+
+
+/* ===== FIM DA PARTE 1 ===== */
+
+
+/* =======================================================
+   PARTE 2 — Serviços / Contato / Footer
+   Responsável: colega (Desenvolvedor)
+   Branch: feature/servicos-contato
+   ======================================================= */
+
+.servicos {
+  background-color: var(--cor-fundo-claro);
+  padding: 72px 0;
+}
+
+.servicos h2 {
+  font-size: 1.9rem;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+}
+
+.card {
+  background-color: #fff;
+  border: 1px solid var(--cor-borda);
+  border-radius: 8px;
+  padding: 24px;
+}
+
+.card h3 {
+  font-size: 1.15rem;
+  margin-bottom: 10px;
+  color: var(--cor-primaria);
+}
+
+.card p {
+  color: var(--cor-texto-claro);
+  font-size: 0.95rem;
+}
+
+.contato {
+  padding: 72px 0;
+}
+
+.contato h2 {
+  font-size: 1.9rem;
+  margin-bottom: 12px;
+}
+
+.contato > .container > p {
+  color: var(--cor-texto-claro);
+  margin-bottom: 28px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  gap: 6px;
+}
+
+.form label {
+  font-weight: 600;
+  margin-top: 12px;
+}
+
+.form input,
+.form textarea {
+  padding: 10px 12px;
+  border: 1px solid var(--cor-borda);
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.form button {
+  margin-top: 20px;
+  align-self: flex-start;
+}
+
+.form small.erro {
+  color: #dc2626;
+  font-size: 0.85rem;
+}
+
+.footer {
+  background-color: var(--cor-texto);
+  color: #f1f5f9;
+  padding: 24px 0;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/* ===== FIM DA PARTE 2 ===== */
+
+
+/* =======================================================
+   RESPONSIVIDADE (desafio extra opcional)
+   ======================================================= */
+
+@media (max-width: 768px) {
+  .nav__list {
+    display: none;
+  }
+
+  .hero__content h1 {
+    font-size: 1.8rem;
+  }
+
+  .sobre__stats {
+    gap: 28px;
+  }
+}
